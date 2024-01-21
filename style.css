@@ -1,0 +1,140 @@
+:root {
+  --clr-red: hsl(1, 90%, 64%);
+  --clr-blue: hsl(219, 85%, 26%);
+
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-very-light-grayish-blue: hsl(210, 60%, 98%);
+  --clr-light-grayish-blue-1: hsl(211, 68%, 94%);
+  --clr-light-grayish-blue-2: hsl(205, 33%, 90%);
+  --clr-grayish-blue: hsl(219, 14%, 63%);
+  --clr-dark-grayish-blue: hsl(219, 12%, 42%);
+  --clr-very-dark-blue: hsl(224, 21%, 14%);
+
+  --fw-500: 500;
+  --fw-800: 800;
+}
+*,
+*::before,
+*::after {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: grid;
+  place-items: center;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  padding: 1rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+p {
+  font-size: 0.8rem;
+}
+h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+h1 span {
+  background-color: var(--clr-blue);
+  padding: 0.2rem 0.7rem;
+  color: var(--clr-white);
+  border-radius: 8px;
+  margin-left: 0.5rem;
+  font-size: 1rem;
+}
+p {
+  color: var(--clr-grayish-blue);
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+.mark-read:hover,
+.post:hover,
+.name:hover,
+.post-blue:hover {
+  cursor: pointer;
+}
+.name:hover {
+  color: var(--clr-blue);
+  font-weight: var(--fw-800);
+}
+
+.post {
+  color: var(--clr-grayish-blue);
+  font-weight: var(--fw-800);
+}
+.post-blue {
+  color: var(--clr-blue);
+  font-weight: var(--fw-800);
+}
+.feed {
+  padding: 1rem;
+  border-radius: 5px;
+  margin-block: 1rem;
+}
+.avatar {
+  display: flex;
+}
+
+.avatar img {
+  width: 35px;
+  height: 35px;
+  margin-right: 1rem;
+}
+.name {
+  color: var(--clr-very-dark-blue);
+  font-weight: var(--fw-800);
+}
+.read-circle {
+  background-color: var(--clr-red);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block; /*MUST have this in order for it to appear*/
+}
+.hide {
+  visibility: hidden;
+}
+.feed-5 {
+  display: flex;
+  justify-content: space-between;
+}
+.feed-5 .chess-img {
+  width: 40px;
+  height: 40px;
+  margin-left: 0.5rem;
+  align-self: flex-start;
+  cursor: pointer;
+}
+.private-msg {
+  padding: 1rem;
+  border: 1px solid var(--clr-grayish-blue);
+  margin-top: 1rem;
+  border-radius: 5px;
+  font-size: 0.85rem;
+  color: var(--clr-grayish-blue);
+  line-height: 1.4;
+}
+.private-msg:hover {
+  cursor: pointer;
+  background-color: var(--clr-light-grayish-blue-2);
+  color: var(--clr-dark-grayish-blue);
+}
+/*Mark read STATES*/
+.feed.active {
+  background-color: var(--clr-very-light-grayish-blue);
+}
+@media (min-width: 568px) {
+  .container {
+    max-width: 640px;
+  }
+}
